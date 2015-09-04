@@ -7,3 +7,5 @@ install:
     - cpanm -q swat::nginx
 
 script: "swat swat::nginx"
+
+
