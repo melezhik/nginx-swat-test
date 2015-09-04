@@ -5,6 +5,7 @@ perl:
 
 before_install: 
     - bash -c 'echo | cpan'
+    - bash -c 'echo "reload index" | cpan'
 
 install:
     - cpan install swat::nginx
