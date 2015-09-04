@@ -4,6 +4,7 @@ perl:
   - "5.18"
 
 install:
+    - echo | cpan
     - cpan  swat::nginx
 
 script: "swat swat::nginx"
