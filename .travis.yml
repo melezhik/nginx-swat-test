@@ -4,7 +4,7 @@ perl:
   - "5.20"
 
 install:
-    - cpanm -q --mirror https://stratopan.com/melezhik/nginx-swat-test/master swat::nginx
+    - cpanm -q --mirror --mirror-only https://stratopan.com/melezhik/nginx-swat-test/master swat::nginx
 
 script: "swat swat::nginx"
 
