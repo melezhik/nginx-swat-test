@@ -1,14 +1,10 @@
 sudo: required
 language: "perl"
 perl:
-  - "5.18"
-
-before_install: 
-    - bash -c 'echo | cpan'
-    - bash -c 'echo "reload index" | cpan'
+  - "5.20"
 
 install:
-    - cpan install swat::nginx
+    - cpanm -q --mirror-only --mirror https://stratopan.com/melezhik/nginx-swat-test/master swat::nginx
 
 script: "swat swat::nginx"
 
