@@ -3,9 +3,11 @@ language: "perl"
 perl:
   - "5.18"
 
+before_install: 
+    - bash -c 'echo | cpan'
+
 install:
-    - echo | cpan
-    - cpan  swat::nginx
+    - cpan install swat::nginx
 
 script: "swat swat::nginx"
 
