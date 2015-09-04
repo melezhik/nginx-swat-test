@@ -1,0 +1,11 @@
+language: "perl"
+perl:
+  - "5.18"
+
+before_install:
+    - sudo apt-get curl
+
+install:
+    - cpanm swat::nginx
+
+script: "swat swat::nginx"
