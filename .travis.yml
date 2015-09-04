@@ -1,8 +1,12 @@
+sudo: required
 language: "perl"
 perl:
   - "5.18"
 
+before_install: 
+    - sudo apt-get install curl
+
 install:
-    - cpanm swat::nginx
+    - cpanm -q swat::nginx
 
 script: "swat swat::nginx"
